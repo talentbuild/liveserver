@@ -1,4 +1,4 @@
-import http from 'http';
+// import http from 'http';
 const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
@@ -13,12 +13,12 @@ const Stripe = require('stripe');
 require('dotenv').config();  // Load environment variables from a .env file
 
 // Create a server object on versel 
-const server = http.createServer((req, res) => {
-  // Set the response header
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  // Write some text to the response
-  res.end('Welcome to esmapp server !');
-});
+// const server = http.createServer((req, res) => {
+//   // Set the response header
+//   res.writeHead(200, {'Content-Type': 'text/plain'});
+//   // Write some text to the response
+//   res.end('Welcome to esmapp server !');
+// });
 
 // Use the port specified in the environment variables, or default to 5000
 const PORT = process.env.PORT || 5000;
@@ -3078,6 +3078,6 @@ app.get('/transactionHistory/:userId', async (req, res) => {
 // });
 
 // Start the server
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
